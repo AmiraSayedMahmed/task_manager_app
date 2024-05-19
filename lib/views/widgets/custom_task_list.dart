@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'custom_notes_item.dart';
-class NotesList extends StatelessWidget {
-  const NotesList({Key? key}) : super(key: key);
+import 'custom_task_item.dart';
+class TaskList extends StatelessWidget {
+  const TaskList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class NotesList extends StatelessWidget {
           itemBuilder: (context , index){
         return const Padding(
           padding: EdgeInsets.symmetric(vertical: 4),
-          child: NotesItem(),
+          child: TaskItem(),
         );
       }),
     );

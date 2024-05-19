@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'custom_app_bar.dart';
-import 'custom_note_list.dart';
-class NotesViewBody extends StatelessWidget {
-  const NotesViewBody({Key? key}) : super(key: key);
+import 'custom_task_list.dart';
+class TaskViewBody extends StatelessWidget {
+  const TaskViewBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class NotesViewBody extends StatelessWidget {
       child: Column(
         children:  [
           SizedBox(height: 50,),
-          CustomAppBar(),
-          Expanded(child: NotesList()),
+          CustomAppBar(icon: Icons.search, title: "Taskes",),
+          Expanded(child: TaskList()),
   ],
 
       ),

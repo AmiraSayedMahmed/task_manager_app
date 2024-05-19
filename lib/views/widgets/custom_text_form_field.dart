@@ -15,6 +15,8 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+         maxLines: maxLines,
+
       cursorColor: kPrimaryColor,
       // obscureText: obsecure!,
      // style: const TextStyle(color: Colors.white , fontSize: 20),
@@ -26,6 +28,7 @@ class CustomTextFormField extends StatelessWidget {
      // onChanged: onChanged,
 
       decoration:  InputDecoration(
+
         enabledBorder: buildBorder(),
         border: buildBorder(),
         focusedBorder: buildBorder(kPrimaryColor),

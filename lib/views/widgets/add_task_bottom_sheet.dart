@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'custom_buttom.dart';
 import 'custom_text_form_field.dart';
 
-class AddNoteToBottomSheet extends StatelessWidget {
-  const AddNoteToBottomSheet({Key? key}) : super(key: key);
+class AddTaskToBottomSheet extends StatelessWidget {
+  const AddTaskToBottomSheet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class AddNoteToBottomSheet extends StatelessWidget {
              const SizedBox(height: 16,),
             CustomTextFormField(
               hintText: "Content",
-              maxLines: 15,
+              maxLines: 5,
             ),
             const SizedBox(height: 16,),
               const CustomButton(),
