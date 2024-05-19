@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:task_manager/constant.dart';
 import 'package:task_manager/views/taskes_view.dart';
 
-void main() {
+void main() async {
+  // to initialize Hive
+  await Hive.initFlutter();
   runApp(const MyApp());
+  // to open the box that we use to store the data (Collection)
+  await Hive.openBox(KTasksBox);
 }
 
 class MyApp extends StatelessWidget {
