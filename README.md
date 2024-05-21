@@ -1,5 +1,7 @@
 # task_manager
     Flutter Project with local database using Hive and Bloc State Management 
+
+    -- Sorry for uncompletting the requirement but i am working and not have have much time to complete all requirment within 3 day
 A new Flutter project.
 
 ## Getting Started
