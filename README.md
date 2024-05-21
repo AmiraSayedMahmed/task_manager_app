@@ -1,7 +1,9 @@
 # task_manager
     Flutter Project with local database using Hive and Bloc State Management 
 
-    -- Sorry for uncompletting the requirement but i am working and not have have much time to complete all requirment within 3 day
+    -- Sorry for uncompletting the requirement but i am working and not have have much time to complete all requirment within 3 days
+      but  i have knowledge about dealing with Api and Sqlite database and i am ready for 3 month or what ever you decide internship before starting the work
+
 A new Flutter project.
 
 ## Getting Started
