@@ -10,24 +10,31 @@ import 'custom_text_form_field.dart';
 
 class AddTaskToBottomSheet extends StatelessWidget {
   const AddTaskToBottomSheet({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16,),
-      child: BlocConsumer<AddTaskCubit, AddTaskState>(
-        listener: (context, state) {
-          if (state is AddTaskFailure){
-           print("Failed ${state.errorMsg}"); 
-          }
-          if (state is AddTaskSuccess){
-
-          }
-        },
-        builder: (context, state) {
-          return ModalProgressHUD(
-              inAsyncCall: state is AddTaskLoading ? true : false,
-          child: const SingleChildScrollView(child: AddTaskForm()));
-        },
+    return BlocProvider(
+      create: (context) => AddTaskCubit(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16,),
+        child: BlocConsumer<AddTaskCubit, AddTaskState>(
+          listener: (context, state) {
+            if (state is AddTaskFailure) {
+              print("Failed ${state.errorMsg}");
+            }
+            if (state is AddTaskSuccess) {
+              Navigator.pop(context);
+            }
+          },
+          builder: (context, state) {
+            return ModalProgressHUD(
+                inAsyncCall: state is AddTaskLoading ? true : false,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 160),
+                  child: const SingleChildScrollView(child: AddTaskForm()),
+                ));
+          },
+        ),
       ),
     );
   }

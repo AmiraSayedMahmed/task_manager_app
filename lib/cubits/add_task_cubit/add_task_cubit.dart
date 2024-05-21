@@ -16,7 +16,7 @@ class AddTaskCubit extends Cubit<AddTaskState> {
       await taskBox.add(task);
       emit(AddTaskSuccess());
 
-    } on Exception catch (e) {
+    } catch (e) {
       emit(AddTaskFailure(e.toString()));
     }
   }
