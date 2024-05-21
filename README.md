@@ -1,5 +1,5 @@
 # task_manager
-
+    Flutter Project with local database using Hive and Bloc State Management 
 A new Flutter project.
 
 ## Getting Started
