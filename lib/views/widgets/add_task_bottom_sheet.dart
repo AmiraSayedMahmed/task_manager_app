@@ -27,12 +27,10 @@ class AddTaskToBottomSheet extends StatelessWidget {
             }
           },
           builder: (context, state) {
-            return ModalProgressHUD(
-                inAsyncCall: state is AddTaskLoading ? true : false,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 160),
-                  child: const SingleChildScrollView(child: AddTaskForm()),
-                ));
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: const SingleChildScrollView(child: AddTaskForm()),
+            );
           },
         ),
       ),
